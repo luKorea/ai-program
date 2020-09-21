@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tim-message": "/components/info/info",
+    "tim-service": "/components/message/message"
+  },
+  "navigationBarTitleText": "AI直播课"
+}

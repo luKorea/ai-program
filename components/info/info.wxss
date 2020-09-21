@@ -1,0 +1,95 @@
+/* components/info/info.wxss */
+
+.info-container .title {
+  position: fixed;
+  top: 406rpx;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #343434;
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1px solid #DEDEDE;
+  z-index: 999;
+}
+
+.info-container .user-info {
+  flex: 1;
+  overflow: auto;
+  margin-top: 120rpx;
+  margin-bottom: 100rpx;
+}
+
+.info-container .user-info .user-wrap {
+  padding: 24rpx 54rpx;
+}
+
+.info-container .user-info .user-wrap .user-content {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 20rpx; */
+}
+
+.info-container .user-info .user-wrap .user-content .name {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #0095D9;
+}
+
+.info-container .user-info .user-wrap .user-content .phone,
+.info-container .user-info .user-wrap .user-content .time {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #999999;
+}
+
+.info-container .user-info .user-wrap .user-desc {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #333333;
+}
+
+.info-container .send-message {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
+  background-color: #fff;
+}
+
+.info-container .send-message .send-flower {
+  width: 140rpx;
+  background: #F86D0D;
+  color: #fff;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+
+.info-container .send-message .input {
+  border: 1px solid #DDDDDD;
+  flex: 1;
+
+}
+
+.info-container .send-message .input input {
+  height: 84rpx;
+  line-height: 84rpx;
+}
+
+
+
+.info-container .send-message .send-info {
+  width: 140rpx;
+  background: #0096DA;
+  color: #fff;
+  text-align: center;
+  font-size: 26rpx;
+}

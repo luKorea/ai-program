@@ -1,0 +1,56 @@
+<view class="container">
+	<!-- 头部区域 -->
+	<view class="video-container" bindtap="bindViewTap">
+		<!-- TODO 判断用户是否授权，授权后获取到用户信息, 隐藏授权按钮 -->
+		<button wx:if="{{!hasUserInfo}}" class="hide-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+		<image class="img" src="{{videoInfo.imgUrl}}"></image>
+		<view class="modal">
+			<view class="modal-content">
+				<view>{{videoInfo.title}}</view>
+				<view>开播时间 {{videoInfo.time}}</view>
+			</view>
+		</view>
+	</view>
+	<!-- 课程列表 -->
+	<view class="course-container">
+		<view class="title">课程列表</view>
+		<view class="content">
+			<view class="item" wx:for='{{listData}}' wx:key='id'>
+				<image class="img" src="{{item.img}}"></image>
+				<text class="text">{{item.title}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- 登陆模态框  -->
+	<view class="login-container" wx:if="{{showModal}}">
+		<view class="login-wrap">
+			<form catchsubmit="formSubmit">
+				<view class="form-container">
+					<view class="title">登陆</view>
+					<view class="page-section">
+						<view class="label">手机号码</view>
+						<input class="input" bindblur='regPhone' type="number" maxlength='11' name='phone' placeholder="请输入手机号码"
+							placeholder-class="phClass" />
+					</view>
+					<view class="page-section">
+						<view class="label">真实姓名</view>
+						<input class="input" bindblur="regName" name='name' placeholder="第一次登录请填写您的真实姓名" placeholder-class="phClass" />
+					</view>
+					<view class="page-section-code">
+						<view class="label">验证码</view>
+						<input class="input" name='code' placeholder="请输入验证码" placeholder-class="phClass" />
+						<view class="code-btn" wx:if="{{showBtn}}" bindtap="sendCode">
+							发送验证码
+						</view>
+						<view class="code-btn" wx:else>
+							{{count}}秒
+						</view>
+					</view>
+				</view>
+				<view class="btn-area">
+					<button formType="submit">立即进入直播间</button>
+				</view>
+			</form>
+		</view>
+	</view>
+</view>

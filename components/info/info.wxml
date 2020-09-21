@@ -1,0 +1,20 @@
+<view class="info-container">
+  <view class="title">{{title}}</view>
+  <view class="user-info">
+    <block wx:for="{{listData}}">
+      <view class="user-wrap">
+        <view class="user-content">
+          <text class="name">{{item.name}}</text>
+          <text class="phone">{{item.phone}}</text>
+          <text class="time">{{item.time}}</text>
+        </view>
+        <view class="user-desc">{{item.message}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="send-message">
+    <view class="send-flower" bindtap="sendFlower">送花</view>
+    <view class="input"><input cursor-spacing='0' type="text" bindinput="bindKeyInput" value="{{defaultValue}}" name='message' /></view>
+    <view class="send-info" bindtap="submitInfo">发送</view>
+  </view>
+</view>

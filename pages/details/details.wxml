@@ -1,0 +1,27 @@
+<view class="im-container">
+  <view class="video-container">
+    <video 
+      class="video" 
+      src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" 
+      enable-danmu 
+      danmu-btn 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+    ></video>
+  </view>
+  <view class="im-wrap">
+    <tim-message wx:if="{{showInfoModal}}"></tim-message>
+    <tim-service wx:else></tim-service>
+  </view>
+  <!-- 咨询聊天 -->
+  <view class="share-container">
+    <view class="share">
+      <button open-type="share" hover-class="none"></button>分享
+    </view>
+    <view class="service">
+        <text wx:if="{{showInfoModal}}" bindtap="setInfoModal">聊天</text>
+        <text wx:else  bindtap="setInfoModal">咨询</text>
+    </view>
+  </view>
+</view>
