@@ -1,7 +1,7 @@
 <view class="message-container">
   <view class="title">{{title}}</view>
   <view class="user-info">
-    <block wx:for="{{listData}}">
+    <block wx:for="{{listData}}" wx:key='id'>
       <view class="user-wrap">
         <view class="user-content">
           <text class="name">{{item.name}}</text>
